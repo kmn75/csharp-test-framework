@@ -1,0 +1,70 @@
+## Папки сборки и кеша
+bin/
+obj/
+packages/
+*.user
+*.suo
+*.cache
+*.tmp
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+## Visual Studio
+.vs/
+*.swp
+*.swo
+*~
+*.sln.docstates
+*.filters
+*.userprefs
+_ReSharper.Caches/
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+
+## Rider / JetBrains
+.idea/
+*.iml
+*.iws
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## Пользовательские настройки
+appsettings.Development.json
+appsettings.Production.json
+*.local.json
+*.secret.json
+
+## Результаты тестов
+TestResults/
+*.html
+*.jsreport
+*.jsreports
+
+## Allure
+allure-results/
+allure-report/
+
+## Видео и скриншоты (если нужно сохранять)
+*.mp4
+*.avi
+*.mov
+*.png
+*.jpg
+*.gif
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+NuGet.Config
+
+## Прочее
+.DS_Store
+Thumbs.db
+Desktop.ini
