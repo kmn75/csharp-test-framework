@@ -1,45 +1,43 @@
-# C# Test Framework для Google.com
+C# Test Framework на Selenium + NUnit
 
-Минималистичный фреймворк для автоматизации тестирования веб-приложений на C# + Selenium + NUnit.
+Минималистичный тестовый фреймворк для автоматизации тестирования веб-приложений на C# + Selenium + NUnit.
 
-## Цели
+Цель проекта:
 - Готовый шаблон для быстрого старта в новом проекте.
 - Демонстрация архитектуры Page Object Model.
 
-## Технологии
+Технологии:
 - .NET 8 + C#
 - Selenium WebDriver
 - NUnit (фреймворк для тестов)
 - Newtonsoft.Json (работа с конфигами)
-- ScreenRecorderLib (запись видео только для упавших тестов)
 
-## Структура проекта
+Структура проекта:
+
 csharp-test-framework/
 ├── Core/
-│   └── WebDriverFactory.cs        Фабрика WebDriver (один драйвер на все тесты)
+│   └── WebDriverFactory.cs        # Фабрика WebDriver (один драйвер на все тесты)
 ├── Utils/
-│   ├── ConfigReader.cs            Чтение appsettings.json
-│   └── Waiters.cs                 Умные ожидания (вместо Thread.Sleep)
+│   ├── ConfigReader.cs            # Чтение appsettings.json
+│   └── Waiters.cs                 # Умные ожидания (без Thread.Sleep)
 ├── Pages/
-│   ├── BasePage.cs                Базовый класс (скриншоты, видео при падении)
-│   └── GoogleSearchPage.cs        Страница поиска Google
+│   ├── BasePage.cs                # Базовый класс (скриншоты при падении)
+│   └── InputsPage.cs              # Страница /inputs (The-Internet)
 ├── Tests/
-│   ├── BaseTest.cs                Настройка драйвера и авто-видео при падении
-│   └── GoogleSearchTests.cs       Тесты поиска
-├── appsettings.json               Конфигурация (URL, браузер, таймауты)
+│   ├── BaseTest.cs                # Настройка драйвера и скриншоты при падении
+│   └── InputsTests.cs             # Тесты для страницы ввода чисел
+├── appsettings.json               # Конфигурация (URL, браузер, таймауты)
 └── README.md
 
-## Для настройки с нуля
+Запуск тестов:
+dotnet test
 
-1. Создать проект (делал в самом начале, в дальнейшем уже без этого шага):
+Настройка с нуля:
+# 1. Создать проект
 dotnet new nunit -n MyTestFramework
 cd MyTestFramework
 
-2. Установить зависимости (делал в самом начале, в дальнейшем уже без этого шага):
+# 2. Установить зависимости
 dotnet add package Selenium.WebDriver
 dotnet add package Selenium.WebDriver.ChromeDriver
 dotnet add package Newtonsoft.Json
-dotnet add package ScreenRecorderLib
-
-3. Запустить тесты:
-dotnet test
