@@ -11,21 +11,15 @@
 - Newtonsoft.Json (работа с конфигами)
 
 Структура проекта:
-
-csharp-test-framework/
-├── Core/
-│   └── WebDriverFactory.cs        # Фабрика WebDriver (один драйвер на все тесты)
-├── Utils/
-│   ├── ConfigReader.cs            # Чтение appsettings.json
-│   └── Waiters.cs                 # Умные ожидания (без Thread.Sleep)
-├── Pages/
-│   ├── BasePage.cs                # Базовый класс (скриншоты при падении)
-│   └── InputsPage.cs              # Страница /inputs (The-Internet)
-├── Tests/
-│   ├── BaseTest.cs                # Настройка драйвера и скриншоты при падении
-│   └── InputsTests.cs             # Тесты для страницы ввода чисел
-├── appsettings.json               # Конфигурация (URL, браузер, таймауты)
-└── README.md
+Core/WebDriverFactory.cs - Фабрика WebDriver
+Utils/ConfigReader.cs - Чтение appsettings.json
+Utils/Waiters.cs - Умные ожидания
+Pages/BasePage.cs - Базовый класс (скриншоты)
+Pages/InputsPage.cs - Страница /inputs
+Tests/BaseTest.cs - Настройка драйвера
+Tests/InputsTests.cs - Тесты для страницы ввода чисел
+appsettings.json - Конфигурация
+README.md
 
 Запуск тестов:
 dotnet test
