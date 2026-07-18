@@ -1,16 +1,16 @@
 Минималистичный тестовый фреймворк для автоматизации тестирования веб-приложений на C# + Selenium + NUnit.
 
-Цель проекта:
+**Цель проекта:**
 - Готовый шаблон для быстрого старта в новом проекте.
 - Демонстрация архитектуры Page Object Model.
 
-Технологии:
+**Технологии:**
 - .NET 8 + C#
 - Selenium WebDriver
 - NUnit (фреймворк для тестов)
 - Newtonsoft.Json (работа с конфигами)
 
-Структура проекта:
+**Структура проекта:**
 
 Core/
   WebDriverFactory.cs        - Фабрика WebDriver
@@ -30,11 +30,7 @@ Tests/
 appsettings.json             - Конфигурация
 README.md
 
-Запуск тестов:
-
-dotnet test
-
-Настройка с нуля:
+**Настройка с нуля:**
 
 1. Создать проект:
 dotnet new nunit -n MyTestFramework
@@ -45,5 +41,6 @@ dotnet add package Selenium.WebDriver
 dotnet add package Selenium.WebDriver.ChromeDriver
 dotnet add package Newtonsoft.Json
 
-3. Запустить тесты:
+**Запуск тестов:**
+
 dotnet test
